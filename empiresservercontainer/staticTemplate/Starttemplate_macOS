@@ -1,4 +1,5 @@
 #https://github.com/Neo-Oli/termux-ubuntu References # EMPIRESSERVERHEADER
+export PATH=$PATH:/usr/local/bin:/usr/local/opt:/usr/bin
 echo PARAM DEBUG ${currdir} ${currentexecfile}
 if [ -z ${currdir} ] ;then
 export currdir=$(pwd)
@@ -13,7 +14,6 @@ xcode-select --install
 # Install dependencies
 brew install python wget gnu-tar subversion gnu-sed dialog
 ##############################
-
 
 
 

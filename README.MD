@@ -1,4 +1,5 @@
-![Empires & Allies](empiresservercontainer/raisetheempiresMod-dev/templates/layouts/logo.png "Empires & Allies logo")
+
+![Empires & Allies](empiresservercontainer/rte_staging_assets/templates/layouts/logo.png "Empires & Allies logo")
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Questandachievement7Developer/RaiseTheEmpiresPort_Native)
 
 
@@ -13,8 +14,8 @@ This project is dedicated to preserving and renewing this Flash game so that it'
 ## Current Status
 | Things | Parameter |
 | ------- | ------ |
-| Current Developed Build | ![version](https://img.shields.io/badge/build-310-blue) |
-| Current Stable Releases | ![version](https://img.shields.io/badge/build-210-blue) |
+| Current Developed Build | ![version](https://img.shields.io/badge/build-377-blue) |
+| Current Stable Releases | ![version](https://img.shields.io/badge/build-319-blue) |
 | Current Built Server Size | [![size](https://img.shields.io/badge/size-283%20MB-brightgreen)](#) |
 | Current Source Size | [![size](https://img.shields.io/badge/size-23%20MB-brightgreen)](#) |
 
@@ -23,8 +24,8 @@ This project is dedicated to preserving and renewing this Flash game so that it'
 
 | Build | Update | Release date  | Download |
 | ------- | ------ | ------------  | -------- |
-| 310 | Smaller File sizes, Order of magnitude Stability improvement, etc.. | April, 2020 | TBA |
-| 260 | Stability Improvement & base32 and base64 Encoder, Liveupdate | April, 2020 | [Quality Control Failed] |
+| 319 | Invading feature, Major bug fixes, Stability improvement, etc.. | April, 2020 | :tickets: [Single Script Archive](https://github.com/Questandachievement7Developer/RaiseTheEmpiresPort_Native/releases/tag/Build_319) |
+| 260 | Base32 and base64 Encoder, Liveupdate | April, 2020 | [Quality Control Failed] |
 | 210 | Added Local mode feature & Stability improvements | April, 2020 | :tickets: [Single Script Archive](https://github.com/Questandachievement7Developer/RaiseTheEmpiresPort_Native/releases/download/Build_210/empires-v210) |
 | 201 | New Welcome screen & Simpler installation with 'curl' | April, 2020 | :tickets: [Single Script Archive](https://github.com/Questandachievement7Developer/RaiseTheEmpiresPort_Native/releases/download/Build_201/empires-server) |
 | 193 | Custom ssh config & Merge with new main repo | April, 2020 | :tickets: [Single Script Archive](https://github.com/Questandachievement7Developer/RaiseTheEmpiresPort_Native/releases/download/Build_193/empires-193) |
@@ -32,8 +33,8 @@ This project is dedicated to preserving and renewing this Flash game so that it'
 | 129 | Multiplayer Update Merge with version 0.05a   | February, 2020    | :tickets: [Single Script Archive](http://tiny.cc/RaiseTheEmpires_129) |
 | 119 | Automatic Host forwarding | January, 2020 | :tickets: [Single Script Archive](http://tiny.cc/EALSERVE119) |
 | 99  | Initial Host forwarding | January, 2020 | [Quality Control failed] |
-| 20  | Released noArch version | January, 2020 | :tickets: [Single Script Archive](http://tiny.cc/RaiseTheEmpires29TNoArch) |
 | 57~58 | First initial Release on android x86 and GNU systems natively | January, 2020 | :tickets: [Single Script Archive](http://tiny.cc/RaiseTheEmpires2020_01_24) |
+| 20  | Released noArch version | January, 2020 | :tickets: [Single Script Archive](http://tiny.cc/RaiseTheEmpires29TNoArch) |
 > Single Script Archive is a single installation file that automates the installation of the server ( Same as a setup wizard in windows but custom built ). Now you don't even need to download the file, just copy paste the command below
 
 ## How to install ?
@@ -41,7 +42,8 @@ This project is dedicated to preserving and renewing this Flash game so that it'
 1. Install Termux and Puffin Browser from Play Store
 2. Copy paste this command to Termux:
 ```
-Under maintanance
+curl -s "https://raw.githubusercontent.com/Questandachievement7Developer/RaiseTheEmpiresPort_Native/master/empiresservercontainer/devTool/TermuxAutoinstaller" | bash -
+./empires-server-termux
 ```
 3. Wait until the installation is completed (and make sure your internet is stable)
 4. After the empires-server is running, copy the link into the Puffin Browser
@@ -50,7 +52,7 @@ Under maintanance
 
 If you want to run it next time, just type this:
 ```
-$ empires-server
+empires-server
 ```
 
 
@@ -61,21 +63,23 @@ $ empires-server
 ### Installing on GNU/Linux/Ubuntu
 Copy paste this command to terminal:
 ```
-Under Maintanance
+sudo curl -s "https://raw.githubusercontent.com/Questandachievement7Developer/RaiseTheEmpiresPort_Native/master/empiresservercontainer/devTool/GNULinuxAutoinstaller" | bash -
+sudo ./empires-server-gnulinux
 ```
 If you want to run it next time, just type this:
 ```
-$ empires-server
+empires-server
 ```
 
 ### Installing on macOS
 Copy paste this command to terminal:
 ```
-Under Maintanance
+/bin/bash -c "$(curl -s "https://raw.githubusercontent.com/Questandachievement7Developer/RaiseTheEmpiresPort_Native/master/empiresservercontainer/devTool/macOSautoinstaller" | bash -)"
+./empires-server-macOS
 ```
 If you want to run it next time, just type this:
 ```
-$ empires-server
+empires-server
 ```
 
 

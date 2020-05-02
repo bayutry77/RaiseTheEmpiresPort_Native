@@ -38,6 +38,8 @@ cleanup # cleaning previous interupted build
 
 reposync_rteMain
 startupMenu(){
+  reset
+  cd ${origindir}
 if [ -z ${compilealltrigger} ]; then
 
 OPTIONS=(
@@ -45,13 +47,13 @@ OPTIONS=(
 "" "Port_native Build $(cat ${origindir}/buildnumber)"
 "" "Compiler Version $(cd ${origindir}/.. ; git log -1 --format=%cd)"
 "==========" "===================Compile Action=========================="
-"Compile" "skip the repo sync"
+"Compile" "Compile packages for distribution"
 "buildtest" "check current build stability"
-"compileall" "skip the reposync and compile all platforms only for termux macOS gnulinux"
+"compileall" "compile all platforms only for termux macOS gnulinux"
 "==========" "===================Repo Action============================="
-"repoSync" "Download and sync all repo Its a must when you are first time downloading the compiler and then proceed compile"
-"localPushRemote" "Push local compiler update to the remote git"
-"localegen" "Generate Languages Compilation")
+"repoSync" "sync all repo Its a must!"
+"==========" "===================Local Action============================="
+"exit" "exit Compiler toolset")
 
 
 
@@ -73,6 +75,9 @@ startupMenu
 exit
 fi
 
+if [ ${ACTION} == "exit" ]; then
+exit
+fi
 
 if [ ${ACTION} == 'repoSync' ]; then
 reposync_mainBranch
@@ -177,7 +182,7 @@ fi
 
 #this is really simple Compiler dont make it complicated
 buildTHESERVER
-exit
+startupMenu
 }
 #_______MAIN_______
 startupMenu
